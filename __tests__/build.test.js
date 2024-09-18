@@ -2,6 +2,9 @@ const isEven = require("../build.js");
 
 describe("isEven", () => {
     test("returns true if number is even", () => {
+        expect(isEven(2)).toBe(false);
+    });
+    test("returns true if number is even", () => {
         expect(isEven(2)).toBe(true);
     });
 
