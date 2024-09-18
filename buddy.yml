@@ -1,8 +1,8 @@
 - pipeline: "Build"
   on: "EVENT"
-  events: - type: "PUSH"
+  events:
+  - type: "PUSH"
   resources: "DEFAULT"
- 
   actions:
   - action: "build"
     type: "BUILD"
@@ -12,8 +12,8 @@
       - npm install
       - npm run build
       - npm run test
-  - action: "build"
-    type: "TEST"
+  - action: "test"
+    type: "BUILD"
     docker_image_name: "library/node"
     docker_image_tag: "16"
     execute_commands:
